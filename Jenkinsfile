@@ -10,4 +10,11 @@ pipeline {
                     
            }
        }
+      stage('Build Dockerfile') {
+           steps {
+              sh 'echo "Run the image"'
+              sh "docker run -it -p 8000:8000 web"   
+                    
+           }
+       }
 }
